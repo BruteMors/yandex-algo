@@ -25,6 +25,13 @@ func main() {
 		arr[i] = num
 	}
 
+	sort := bubbleSort(arr)
+
+	fmt.Fprintln(out, sort)
+
+}
+
+func bubbleSort(arr []int) []int {
 	for i := 0; i < len(arr); i++ {
 		for j := 0; j < len(arr)-1; j++ {
 			if arr[j] > arr[j+1] {
@@ -34,7 +41,5 @@ func main() {
 			}
 		}
 	}
-
-	fmt.Fprintln(out, arr)
-
+	return arr
 }
